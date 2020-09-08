@@ -10,7 +10,7 @@
 
             <div class="card border-0 shadow">
                 <div class="px-3 py-3">
-                    <h4 class="text muted">Master Kegiatan</h4>
+                    <h4 class="text muted">Kegiatan Santri</h4>
                 </div>
 
                 <div class="card-body">

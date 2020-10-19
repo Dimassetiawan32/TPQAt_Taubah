@@ -24,3 +24,13 @@ Route::group(['prefix' => 'kegiatan'], function(){
     Route::get('create', 'KegiatanController@create')->name('backend.kegiatan.create');
 });
 
+Route::group(['prefix' => 'biodata'], function(){
+    Route::get('index', 'BiodataController@index')->name('backend.biodata.index');
+    Route::get('create', 'BiodataController@create')->name('backend.biodata.create');
+    Route::post('save', 'BiodataController@store')->name('biodata.save');
+    Route::get('formEdit/{biodata}','BiodataController@edit')->name('backend.biodata.formEdit');
+    Route::patch('update/{biodata}','BiodataController@update')->name('backend.biodata.update');
+    Route::get('show/{biodata}','BiodataController@show')->name('backend.biodata.show');
+    Route::get('hapus/{biodata}', 'BiodataController@destroy')->name('backend.biodata.hapus');
+});
+

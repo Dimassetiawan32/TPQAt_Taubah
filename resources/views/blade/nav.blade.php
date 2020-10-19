@@ -11,10 +11,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a href="" class="nav-link">Dashboard</a>
-                        </li>
-                        <li class="nav-item">
-                            <a href="" class="nav-link">Biodata Santri</a>
+                            <a href="{{route('backend.biodata.index')}}" class="nav-link">Biodata Santri</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

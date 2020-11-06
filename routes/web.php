@@ -31,6 +31,6 @@ Route::group(['prefix' => 'biodata'], function(){
     Route::get('formEdit/{biodata}','BiodataController@edit')->name('backend.biodata.formEdit');
     Route::patch('update/{biodata}','BiodataController@update')->name('backend.biodata.update');
     Route::get('show/{biodata}','BiodataController@show')->name('backend.biodata.show');
-    Route::get('hapus/{biodata}', 'BiodataController@destroy')->name('backend.biodata.hapus');
+    Route::delete('delete/{biodata}', 'BiodataController@destroy')->name('backend.biodata.delete');
 });
 

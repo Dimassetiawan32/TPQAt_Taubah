@@ -33,11 +33,13 @@
                                 </td>
                                 <td>{{$biodata->telpon}}</td>
                                 <td>
-                                    @csrf
-                                    @method('DELETE')
-                                    <a href="{{route('backend.biodata.formEdit', $biodata->id)}}" class="btn btn-outline-primary btn-sm">Edit</a>
-                                    <a href="{{route('backend.biodata.show', $biodata->id)}}" class="btn btn-outline-success btn-sm">Show</a>
-                                    <a href="{{route('backend.biodata.hapus', $biodata->id)}}" class="btn btn-outline-danger btn-sm">Hapus</a>
+                                    <form action="{{route('backend.biodata.delete', $biodata->id)}}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <a href="{{route('backend.biodata.formEdit', $biodata->id)}}" class="btn btn-outline-primary btn-sm">Edit</a>
+                                        <a href="{{route('backend.biodata.show', $biodata->id)}}" class="btn btn-outline-success btn-sm">Show</a>
+                                        <button href="" class="btn btn-outline-danger btn-sm">Hapus</button>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

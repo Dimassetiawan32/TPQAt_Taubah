@@ -85,13 +85,15 @@ class BiodataController extends Controller
         return view("backend.biodata.show", compact('biodata'));
     }
     
-    public function destroy($id)
+    public function destroy(Biodata $biodata)
     {
-        $biodata = Biodata::findOrFail($id);
+        $biodata->delete();
 
-        $biodata -> delete($biodata-> all());
+        if(\File::exists(public_path('storage/'. $biodata->images))){
+            \File::delete(public_path('storage/'. $biodata->images));
+        }
 
-        return redirect($biodata)->with('success', 'Data Telah Dihapus');
+        return redirect()->back()->with(['success' => 'Data berhasil di hapus']);
     }
 
 }

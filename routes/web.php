@@ -34,3 +34,6 @@ Route::group(['prefix' => 'biodata'], function(){
     Route::delete('delete/{biodata}', 'BiodataController@destroy')->name('backend.biodata.delete');
 });
 
+Route::get('create/sms','SmsController@create')->name('create.sms');
+Route::post('kirim/sms','SmsController@store')->name('kirim.sms');
+

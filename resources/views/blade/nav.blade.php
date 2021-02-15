@@ -13,17 +13,11 @@
                         <li class="nav-item">
                             <a href="{{route('backend.biodata.index')}}" class="nav-link">Biodata Santri</a>
                         </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Baca Dan Hafalan Santri
-                            </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Baca</a>
-                            <a class="dropdown-item" href="#">Hafalan</a>
-                            </div>
-                        </li>
                         <li class="nav-item">
                             <a href="{{route('backend.kegiatan.index')}}" class="nav-link">Kegiatan Santri</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{route('create.sms')}}" class="nav-link active text-muted">{{__('SMS')}}</a>
                         </li>
                         <li class="nav-item">
                             <a href="" class="nav-link">User</a>

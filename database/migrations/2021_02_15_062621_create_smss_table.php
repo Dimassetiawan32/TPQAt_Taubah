@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateHapalanTable extends Migration
+class CreateSmssTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateHapalanTable extends Migration
      */
     public function up()
     {
-        Schema::create('hapalan', function (Blueprint $table) {
+        Schema::create('smss', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('hari');
-            $table->string('halaman');
-            $table->string('surat');
-            $table->string('ayat');
-            $table->string('jus');
+            $table->string('number');
+            $table->string('message');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateHapalanTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hapalan');
+        Schema::dropIfExists('smss');
     }
 }

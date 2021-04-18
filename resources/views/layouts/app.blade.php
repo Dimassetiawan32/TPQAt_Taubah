@@ -24,6 +24,9 @@
         @include('blade.nav')
 
         <main class="py-4">
+            <div id="flash-msg">
+                @include('flash::message')
+            </div>
             @yield('content')
         </main>
     </div>

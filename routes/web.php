@@ -37,3 +37,12 @@ Route::group(['prefix' => 'biodata'], function(){
 Route::get('create/sms','SmsController@create')->name('create.sms');
 Route::post('kirim/sms','SmsController@store')->name('kirim.sms');
 
+Route::get('create/email','EmailController@create')->name('create.email');
+Route::get('kirim/email','EmailController@store')->name('kirim.email');
+
+
+Route::group( ['middleware' => ['auth']], function() {
+    Route::resource('users', 'UserController');
+    Route::resource('roles', 'RoleController');
+    Route::resource('posts', 'PostController');
+});

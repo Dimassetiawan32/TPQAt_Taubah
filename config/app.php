@@ -163,10 +163,14 @@ return [
         Illuminate\View\ViewServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
         
+        
         /*
          * Package Service Providers...
          */
         Nexmo\Laravel\NexmoServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,        
+        Laracasts\Flash\FlashServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
         /*
          * Application Service Providers...
          */
@@ -226,6 +230,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'Image' => Intervention\Image\Facades\Image::class,
         'Nexmo' => Nexmo\Laravel\Facade\Nexmo::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+
     ],
 
 ];
